@@ -1,1 +1,17 @@
-/*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Fahkwang:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #F1F0EB;
+  color: #524640;
+}
+
+.sidebar {
+  height: 100vh;
+  width: 5vw;
+  background-color: #7B655A;
+}/*# sourceMappingURL=main.css.map */
