@@ -8,10 +8,121 @@
 body {
   background-color: #F1F0EB;
   color: #524640;
+  font-family: "Roboto", sans-serif;
 }
 
 .sidebar {
-  height: 100vh;
-  width: 5vw;
+  display: none;
+}
+
+h1, h2, h3 {
+  font-family: "Fahkwang", sans-serif;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+header {
+  height: 45vh;
+}
+header img {
+  width: 400px;
+  transform: rotate(150deg);
+  position: absolute;
+  left: 20vw;
+  bottom: 60vh;
+}
+header .header__flexcontainer {
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+header .header__flexcontainer .header__menu--phone {
+  width: 15vw;
+  justify-content: end;
+  font-size: 2.5em;
+  margin: 3.5vh 5vw 0 0;
+  cursor: pointer;
+}
+header .header__flexcontainer .header__introtext {
+  margin: 5vh 0 0 8vw;
+}
+header .header__flexcontainer .header__introtext h1 {
+  font-size: 1.8em;
+  max-width: 8ch;
+  padding-bottom: 1vh;
+  line-height: 90%;
+}
+header .header__flexcontainer .header__introtext p {
+  font-size: 1em;
+  font-weight: 100;
+}
+
+main h2 {
+  margin: 2.5vh 0 0 5vw;
+}
+main .section__skills {
+  background-color: #FAC984;
+  height: 60vh;
+}
+main .section__skills h2 {
+  padding-top: 2.5vh;
+}
+main .section__skills .skills__frontend, main .section__skills .skills__backend {
+  margin-top: 6vh;
+  text-align: center;
+}
+main .section__skills .skills__frontend p, main .section__skills .skills__backend p {
+  font-family: "Fahkwang", sans-serif;
+}
+main .section__skills .skills__frontend h3, main .section__skills .skills__backend h3 {
+  padding-bottom: 1.5vh;
+  font-size: 1em;
+  font-weight: 600;
+}
+main .section__projects {
+  height: 120vh;
+}
+main .section__projects .project__cards {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 7vh;
+}
+main .section__projects .project__cards .project__cards--card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  min-height: 30vh;
+  min-width: 50vw;
+  margin-bottom: 2vh;
+  margin: 1vh 1vw;
+  padding: 1vh;
+}
+main .section__contact {
+  height: 50vh;
+}
+main .section__contact hr {
+  width: 89vw;
+  margin: 0 auto;
+}
+
+footer {
   background-color: #7B655A;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1.6em;
+}
+footer p {
+  font-family: "Fahkwang", sans-serif;
+  color: #F1F0EB;
+  font-weight: 600;
+}
+footer .footer__icons .footer__icons--icon {
+  width: 7vw;
+  padding-right: 0.5em;
 }/*# sourceMappingURL=main.css.map */

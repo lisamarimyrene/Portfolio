@@ -9,10 +9,147 @@
 body {
     background-color: colors.$background;
     color: colors.$font;
+    font-family: fonts.$roboto;
 }
 
 .sidebar {
-    height: 100vh;  
-    width: 5vw;
-    background-color: colors.$brown; 
+    display: none;
+}
+
+h1, h2, h3 {
+    font-family: fonts.$fahkwang;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+header {
+    height: 45vh;
+    
+
+    img {
+        width: 400px;
+        transform: rotate(150deg);
+        position: absolute;
+        left: 20vw;
+        bottom: 60vh;
+
+    }
+    .header__flexcontainer {
+        width: 100vw;
+        position: relative;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        
+        .header__menu--phone {
+            width: 15vw;
+            justify-content: end;
+            font-size: 2.5em;
+            margin: 3.5vh 5vw 0 0;
+            cursor: pointer;
+        
+        }
+        .header__introtext {
+
+            margin: 5vh 0 0 8vw;
+
+            h1 {
+                font-size: 1.8em;
+                max-width: 8ch;
+                padding-bottom: 1vh;
+                line-height: 90%;
+            }
+            p {
+                font-size: 1em;
+                font-weight: 100;
+            }
+        
+        }
+    }
+}
+
+main {
+
+    h2 {
+        margin: 2.5vh 0 0 5vw;
+
+    }
+
+    .section__skills {
+        background-color: colors.$yellow;
+        height: 60vh;
+
+        h2 {
+            padding-top: 2.5vh;
+        }
+        .skills__frontend, .skills__backend {
+            margin-top: 6vh;
+            text-align: center;
+
+            p {
+                font-family: fonts.$fahkwang;
+            }
+
+            h3 {
+                padding-bottom:1.5vh;
+                font-size: 1em;
+                font-weight: 600;
+            }
+        }
+    }
+    .section__projects {
+        height: 120vh;
+
+        .project__cards {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 7vh;
+
+            .project__cards--card {
+                display: flex;
+                flex-direction: column;
+                background-color: white;
+                min-height: 30vh;
+                min-width: 50vw;
+                margin-bottom: 2vh;
+                margin: 1vh 1vw;
+                padding: 1vh;
+
+            }
+        }
+    }
+    .section__contact {
+        height: 50vh;
+
+        hr {
+            width: 89vw;
+            margin: 0 auto;
+        }
+    }
+
+
+}
+
+footer {
+    background-color: colors.$brown;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.6em;
+
+    p {
+        font-family: fonts.$fahkwang;
+        color: colors.$background;
+        font-weight: 600;
+    }
+    .footer__icons {
+
+        .footer__icons--icon {
+            width: 7vw;
+            padding-right: 0.5em;
+        }
+    }
 }
