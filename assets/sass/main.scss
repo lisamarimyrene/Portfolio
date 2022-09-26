@@ -10,6 +10,8 @@ body {
     background-color: colors.$background;
     color: colors.$font;
     font-family: fonts.$roboto;
+    max-width: 100%;
+
 }
 
 .sidebar {
@@ -23,17 +25,23 @@ h1, h2, h3 {
 }
 
 header {
-    height: 45vh;
     
+    height: 45vh;
+    overflow: hidden;
 
-    img {
-        width: 400px;
-        transform: rotate(150deg);
-        position: absolute;
-        left: 20vw;
-        bottom: 60vh;
+    .header__imgcontainer {
 
+        position: relative;
+    
+        img {
+            width: 400px;
+            transform: rotate(150deg);
+            position: absolute;
+            left: 20vw;
+            top: -10vh;
+        }
     }
+
     .header__flexcontainer {
         width: 100vw;
         position: relative;

@@ -9,6 +9,7 @@ body {
   background-color: #F1F0EB;
   color: #524640;
   font-family: "Roboto", sans-serif;
+  max-width: 100%;
 }
 
 .sidebar {
@@ -23,13 +24,17 @@ h1, h2, h3 {
 
 header {
   height: 45vh;
+  overflow: hidden;
 }
-header img {
+header .header__imgcontainer {
+  position: relative;
+}
+header .header__imgcontainer img {
   width: 400px;
   transform: rotate(150deg);
   position: absolute;
   left: 20vw;
-  bottom: 60vh;
+  top: -10vh;
 }
 header .header__flexcontainer {
   width: 100vw;
