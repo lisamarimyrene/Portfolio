@@ -128,17 +128,43 @@ main .section__projects .project__cards .project__cards--card p {
   padding-left: 1.3em;
   font-size: 0.8em;
 }
-main .section__contact {
-  height: 50vh;
+main .section__about {
+  height: 80vh;
+  overflow: hidden;
+  width: 100vw;
 }
-main .section__contact hr {
+main .section__about hr {
   width: 89vw;
   margin: 0 auto;
   background-color: #524640;
 }
-main .section__contact .contact__img {
+main .section__about .about__img {
   margin: 0 auto;
-  width: 10vw;
+  width: 50vw;
+  border-radius: 50%;
+  display: flex;
+  margin-top: 5vh;
+}
+main .section__about .about__infotext {
+  margin: 4vh auto 0 auto;
+  width: 57vw;
+}
+main .section__about .about__infotext p {
+  font-size: 0.85em;
+  font-weight: 100;
+  padding-bottom: 1em;
+  line-height: 140%;
+}
+main .section__about .about__imgcontainer {
+  position: relative;
+}
+main .section__about .about__imgcontainer img {
+  width: 400px;
+  transform: rotate(215deg);
+  position: absolute;
+  left: 35vw;
+  top: -17vh;
+  z-index: -1;
 }
 
 footer {
@@ -147,6 +173,7 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   padding: 1.6em;
+  align-items: center;
 }
 footer p {
   font-family: "Fahkwang", sans-serif;
@@ -154,6 +181,22 @@ footer p {
   font-weight: 600;
 }
 footer .footer__icons .footer__icons--icon {
+  fill: #F1F0EB;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
   width: 7vw;
   padding-right: 0.5em;
+  font-weight: 100;
+}
+footer .footer__icons .footer__icons--icon:hover {
+  fill: #FAC984;
+}
+
+@media screen and (min-width: 470px) {
+  .sidebar {
+    display: block;
+    background-color: #7B655A;
+    height: 100vh;
+    width: 4vw;
+  }
 }/*# sourceMappingURL=main.css.map */
