@@ -16,25 +16,29 @@ body {
 
 }
 
-.sidebar {
+.sidebar,
+.header__navbar {
     display: none;
 }
 
-h1, h2, h3 {
+
+h1,
+h2,
+h3 {
     font-family: fonts.$fahkwang;
     font-weight: 100;
     text-transform: uppercase;
 }
 
 header {
-    
+
     height: 45vh;
     overflow: hidden;
 
     .header__imgcontainer {
 
         position: relative;
-    
+
         img {
             width: 400px;
             transform: rotate(150deg);
@@ -50,15 +54,20 @@ header {
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
-        
+
+        .header__h2 {
+            display: none;
+        }
+
         .header__menu--phone {
             width: 15vw;
             justify-content: end;
             font-size: 2.5em;
             margin: 3.5vh 5vw 0 0;
             cursor: pointer;
-        
+
         }
+
         .header__introtext {
 
             margin: 5vh 0 0 8vw;
@@ -69,11 +78,12 @@ header {
                 padding-bottom: 1vh;
                 line-height: 90%;
             }
+
             p {
                 font-size: 1em;
                 font-weight: 100;
             }
-        
+
         }
     }
 }
@@ -85,14 +95,20 @@ main {
 
     }
 
-    .section__skills {
+    .section__skills--desktop {
+        display: none;
+    }
+
+    .section__skills--mobile {
         background-color: colors.$yellow;
         height: 60vh;
 
         h2 {
             padding-top: 2.5vh;
         }
-        .skills__frontend, .skills__backend {
+
+        .skills__frontend,
+        .skills__backend {
             margin-top: 6vh;
             text-align: center;
 
@@ -101,12 +117,13 @@ main {
             }
 
             h3 {
-                padding-bottom:1.5vh;
+                padding-bottom: 1.5vh;
                 font-size: 1em;
                 font-weight: 600;
             }
         }
     }
+
     .section__projects {
         height: 120vh;
 
@@ -126,13 +143,13 @@ main {
                 min-width: 50vw;
                 margin-bottom: 2vh;
                 margin: 1vh 1vw;
-             
+
 
                 .cards__img {
                     height: 20vh;
                     width: 100%;
                     background-color: colors.$yellow;
-                    
+
                 }
 
                 .cards__info {
@@ -148,7 +165,7 @@ main {
                     .cards__arrowBtn {
                         width: 6vw;
                         cursor: pointer;
-                    
+
                     }
                 }
 
@@ -159,10 +176,10 @@ main {
             }
         }
     }
+
     .section__about {
         height: 80vh;
         overflow: hidden;
-        width: 100vw;
 
         hr {
             width: 89vw;
@@ -177,11 +194,12 @@ main {
             display: flex;
             margin-top: 5vh;
         }
+
         .about__infotext {
             margin: 4vh auto 0 auto;
             width: 57vw;
 
-            
+
 
             p {
                 font-size: 0.85em;
@@ -190,10 +208,11 @@ main {
                 line-height: 140%;
             }
         }
+
         .about__imgcontainer {
 
             position: relative;
-        
+
             img {
                 width: 400px;
                 transform: rotate(215deg);
@@ -221,6 +240,7 @@ footer {
         color: colors.$background;
         font-weight: 600;
     }
+
     .footer__icons {
 
         .footer__icons--icon {
@@ -231,6 +251,7 @@ footer {
             padding-right: 0.5em;
             font-weight: 100;
         }
+
         .footer__icons--icon:hover {
             fill: colors.$yellow;
 
@@ -239,12 +260,337 @@ footer {
     }
 }
 
+
 @media screen and (min-width: 470px) {
-   
+
+    .header__menu--phone,
+    footer {
+        display: none;
+    }
+
     .sidebar {
         display: block;
+        position: fixed;
         background-color: colors.$brown;
         height: 100vh;
-        width: 4vw;
+        width: 5vw;
+
+        .sidebar__flexcontainer--desktop {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .sidebar__icons {
+                text-align: center;
+                padding-top: 5vh;
+
+                .sidebar__icons--icon {
+                    fill: colors.$background;
+                    fill-rule: evenodd;
+                    clip-rule: evenodd;
+                    width: 2.5vw;
+                    padding-right: 0.5em;
+                    font-weight: 100;
+                    padding-bottom: 2.5vh;
+                }
+
+                .sidebar__icons--icon:hover {
+                    fill: colors.$yellow;
+                    cursor: pointer;
+
+                }
+            }
+
+            .sidebar__verticaltxt {
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-bottom: 5vh;
+
+                p {
+                    font-family: fonts.$fahkwang;
+                    color: colors.$background;
+                    font-weight: 600;
+                    margin-bottom: -0.7vh;
+                }
+            }
+
+        }
+
     }
+
+    header {
+        height: 100vh;
+        // scroll-snap-align: center;
+
+
+        .header__navbar {
+            display: block;
+            cursor: pointer;
+            margin-left: 5vw;
+            width: 80vw;
+            margin: 4vh auto 0;
+            padding-left: 5vw;
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                list-style: none;
+                font-family: fonts.$fahkwang;
+                text-transform: uppercase;
+
+
+                li {
+                    padding: 1vw 0 1vw 1vw;
+                }
+
+                li:hover {
+                    font-weight: 600;
+                }
+
+                #li__firstBtn {
+                    margin-right: auto;
+                    padding: 1vw 1vw 1vw 0;
+                    color: colors.$yellow;
+                    font-weight: 600;
+                    cursor: default;
+
+                }
+            }
+        }
+
+        .header__flexcontainer {
+            position: relative;
+            flex-direction: column;
+            width: 80vw;
+            height: 72vh;
+            padding: 3vh 0 0 5vw;
+            margin: 0 auto;
+            justify-content: space-between;
+
+            .header__h2 {
+                display: block;
+                font-size: 1.3rem;
+            }
+
+            .header__introtext {
+                margin: 0;
+
+                h1 {
+                    font-size: 5rem;
+                }
+
+                p {
+                    font-size: 1.6rem;
+                    padding-top: 2vh;
+                }
+            }
+
+        }
+
+        .header__imgcontainer {
+
+            position: relative;
+
+            img {
+                width: 35vw;
+                transform: rotate(160deg);
+                position: absolute;
+                left: 55vw;
+                top: 10vh;
+                z-index: -1;
+                opacity: 90%;
+            }
+
+        }
+    }
+
+    main {
+        margin-left: 5vw;
+
+        hr {
+            background-color: colors.$yellow;
+            height: 0.2vh;
+            border: none;
+        }
+
+        #main__h2--portfolio {
+            display: none;
+        }
+
+        .section__skills--mobile {
+            display: none;
+        }
+
+        .section__projects,
+        .section__about {
+
+            h2 {
+                padding-top: 4vh;
+                padding-left: 2.5vw;
+            }
+        }
+
+        .section__skills--desktop {
+            // scroll-snap-align: center;
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+
+
+            .skills__desktop--left {
+                background-color: colors.$yellow;
+                width: 50vw;
+                height: 100vh;
+
+                h2 {
+                    padding-top: 4vh;
+                    padding-left: 2.5vw;
+                }
+
+                .desktop__left--arrow {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 90vh;
+
+                    img {
+                        width: 30vw;
+                    }
+                }
+
+            }
+
+            .skills__desktop--right {
+                display: flex;
+                flex-direction: column;
+                background-color: colors.$background;
+                width: 50vw;
+                justify-content: center;
+
+                hr {
+                    color: colors.$yellow;
+                }
+
+                .skills__frontend,
+                .skills__backend {
+                    margin-top: 6vh;
+                    text-align: center;
+
+                    p {
+                        font-family: fonts.$fahkwang;
+                    }
+
+                    h3 {
+                        padding-bottom: 1.5vh;
+                        font-size: 1em;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        .section__projects {
+            height: 100vh;
+            width: 100%;
+
+
+            .project__cards {
+                width: 100%;
+                height: 70vh;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+
+                .project__cards--card {
+                    display: flex;
+                    flex-direction: column;
+                    background-color: white;
+                    min-height: 40vh;
+                    min-width: 15vw;
+                    margin-bottom: 2vh;
+                    margin: 1vh 1vw;
+
+                    .cards__img {
+                        height: 25vh;
+                        width: 100%;
+                        background-color: colors.$yellow;
+
+                    }
+
+                    .cards__info {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        padding: 1em;
+
+                        h4 {
+                            font-family: fonts.$fahkwang;
+                        }
+
+                        .cards__arrowBtn {
+                            width: 2vw;
+                            cursor: pointer;
+                        }
+                    }
+
+                    p {
+                        padding-left: 1.3em;
+                        font-size: 0.8em;
+                    }
+                }
+            }
+        }
+        .section__about {
+            height: 100vh;
+            overflow: hidden;
+    
+            hr {
+                width: 80vw;
+                border: none;
+                height: 0.1vh;
+            }
+    
+            .about__img {
+                width: 20vw;
+                border-radius: 50%;
+                display: flex;
+                margin-top: 5vh;
+            }
+    
+            .about__infotext {
+                margin: 4vh auto 0 auto;
+                width: 57vw;
+    
+    
+    
+                p {
+                    font-size: 0.85em;
+                    font-weight: 100;
+                    padding-bottom: 1em;
+                    line-height: 140%;
+                }
+            }
+    
+            .about__imgcontainer {
+    
+                position: relative;
+    
+                img {
+                    width: 400px;
+                    transform: rotate(215deg);
+                    position: absolute;
+                    left: 35vw;
+                    top: -17vh;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+    
 }
