@@ -70,23 +70,26 @@ header .header__flexcontainer .header__introtext p {
   font-weight: 100;
 }
 
+main .skills__desktop--hr, main .section__skills--desktop {
+  display: none;
+}
 main h2 {
   margin: 2.5vh 0 0 5vw;
 }
-main .section__skills--desktop {
-  display: none;
-}
 main .section__skills--mobile {
   background-color: #FAC984;
-  height: 60vh;
+  height: 65vh;
 }
 main .section__skills--mobile h2 {
   padding-top: 2.5vh;
 }
 main .section__skills--mobile .skills__frontend,
 main .section__skills--mobile .skills__backend {
-  margin-top: 6vh;
-  text-align: center;
+  margin: 6vh auto 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 30vw;
 }
 main .section__skills--mobile .skills__frontend p,
 main .section__skills--mobile .skills__backend p {
@@ -99,7 +102,8 @@ main .section__skills--mobile .skills__backend h3 {
   font-weight: 600;
 }
 main .section__projects {
-  height: 120vh;
+  height: auto;
+  padding-bottom: 10vh;
 }
 main .section__projects .project__cards {
   width: 100%;
@@ -115,8 +119,7 @@ main .section__projects .project__cards .project__cards--card {
   background-color: white;
   min-height: 30vh;
   min-width: 50vw;
-  margin-bottom: 2vh;
-  margin: 1vh 1vw;
+  margin: 2.5vh 1vw;
 }
 main .section__projects .project__cards .project__cards--card .cards__img {
   height: 20vh;
@@ -204,6 +207,22 @@ footer .footer__icons .footer__icons--icon:hover {
 }
 
 @media screen and (min-width: 470px) {
+  @-webkit-keyframes arrowmove {
+    from {
+      left: -100px;
+    }
+    to {
+      left: 100px;
+    }
+  }
+  @keyframes arrowmove {
+    from {
+      left: -100px;
+    }
+    to {
+      left: 100px;
+    }
+  }
   .header__menu--phone,
 footer {
     display: none;
@@ -320,15 +339,13 @@ footer {
   main {
     margin-left: 5vw;
   }
-  main hr {
+  main .skills__desktop--hr {
+    display: block;
     background-color: #FAC984;
     height: 0.2vh;
     border: none;
   }
-  main #main__h2--portfolio {
-    display: none;
-  }
-  main .section__skills--mobile {
+  main #main__h2--portfolio, main .section__skills--mobile {
     display: none;
   }
   main .section__projects h2,
@@ -358,6 +375,8 @@ main .section__about h2 {
   }
   main .section__skills--desktop .skills__desktop--left .desktop__left--arrow img {
     width: 30vw;
+    -webkit-animation: arrowmove 10s normal;
+            animation: arrowmove 10s normal;
   }
   main .section__skills--desktop .skills__desktop--right {
     display: flex;
@@ -366,26 +385,36 @@ main .section__about h2 {
     width: 50vw;
     justify-content: center;
   }
-  main .section__skills--desktop .skills__desktop--right hr {
+  main .section__skills--desktop .skills__desktop--right .skills__desktop--hr {
     color: #FAC984;
+    display: block;
+    width: 80vw;
   }
   main .section__skills--desktop .skills__desktop--right .skills__frontend,
 main .section__skills--desktop .skills__desktop--right .skills__backend {
-    margin-top: 6vh;
-    text-align: center;
-  }
-  main .section__skills--desktop .skills__desktop--right .skills__frontend p,
-main .section__skills--desktop .skills__desktop--right .skills__backend p {
-    font-family: "Fahkwang", sans-serif;
+    margin: 6vh auto 0 auto;
+    width: 11vw;
   }
   main .section__skills--desktop .skills__desktop--right .skills__frontend h3,
 main .section__skills--desktop .skills__desktop--right .skills__backend h3 {
     padding-bottom: 1.5vh;
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: 600;
+    padding-left: 0;
+  }
+  main .section__skills--desktop .skills__desktop--right .skills__frontend p,
+main .section__skills--desktop .skills__desktop--right .skills__backend p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.1em;
+    font-weight: 100;
+    padding-top: 0.3vh;
+  }
+  main .section__skills--desktop .skills__desktop--right .skills__frontend p:last-of-type,
+main .section__skills--desktop .skills__desktop--right .skills__backend p:last-of-type {
+    padding-bottom: 2vh;
   }
   main .section__projects {
-    height: 100vh;
+    height: 90vh;
     width: 100%;
   }
   main .section__projects .project__cards {
@@ -430,38 +459,35 @@ main .section__skills--desktop .skills__desktop--right .skills__backend h3 {
   }
   main .section__about {
     height: 100vh;
-    overflow: hidden;
   }
   main .section__about hr {
     width: 80vw;
     border: none;
     height: 0.1vh;
   }
-  main .section__about .about__img {
-    width: 20vw;
-    border-radius: 50%;
+  main .section__about .about__flexcontainer {
     display: flex;
-    margin-top: 5vh;
+    flex-direction: row;
+    align-items: center;
+    width: 70vw;
+    height: 70vh;
+    margin: 0 auto;
   }
-  main .section__about .about__infotext {
-    margin: 4vh auto 0 auto;
-    width: 57vw;
+  main .section__about .about__flexcontainer .about__img {
+    width: 20vw;
   }
-  main .section__about .about__infotext p {
-    font-size: 0.85em;
-    font-weight: 100;
-    padding-bottom: 1em;
-    line-height: 140%;
+  main .section__about .about__flexcontainer .about__infotext {
+    width: 28vw;
   }
-  main .section__about .about__imgcontainer {
-    position: relative;
+  main .section__about .about__flexcontainer .about__infotext p {
+    font-size: 1em;
   }
   main .section__about .about__imgcontainer img {
-    width: 400px;
-    transform: rotate(215deg);
+    width: 50vw;
+    transform: rotate(225deg);
     position: absolute;
-    left: 35vw;
-    top: -17vh;
+    left: 55vw;
+    top: -40vh;
     z-index: -1;
   }
 }/*# sourceMappingURL=main.css.map */

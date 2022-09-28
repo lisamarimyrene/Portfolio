@@ -1,8 +1,6 @@
 @use './colors';
 @use './fonts';
 
-
-
 * {
     margin: 0;
     padding: 0;
@@ -89,19 +87,18 @@ header {
 }
 
 main {
+    .skills__desktop--hr, .section__skills--desktop {
+        display: none;
+    }
 
     h2 {
         margin: 2.5vh 0 0 5vw;
 
     }
 
-    .section__skills--desktop {
-        display: none;
-    }
-
     .section__skills--mobile {
         background-color: colors.$yellow;
-        height: 60vh;
+        height: 65vh;
 
         h2 {
             padding-top: 2.5vh;
@@ -109,8 +106,13 @@ main {
 
         .skills__frontend,
         .skills__backend {
-            margin-top: 6vh;
-            text-align: center;
+            margin: 6vh auto 0 auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 30vw;
+            
+            
 
             p {
                 font-family: fonts.$fahkwang;
@@ -125,7 +127,8 @@ main {
     }
 
     .section__projects {
-        height: 120vh;
+        height: auto;
+        padding-bottom: 10vh;
 
         .project__cards {
             width: 100%;
@@ -141,8 +144,7 @@ main {
                 background-color: white;
                 min-height: 30vh;
                 min-width: 50vw;
-                margin-bottom: 2vh;
-                margin: 1vh 1vw;
+                margin: 2.5vh 1vw;
 
 
                 .cards__img {
@@ -185,6 +187,7 @@ main {
             width: 89vw;
             margin: 0 auto;
             background-color: colors.$font;
+            
         }
 
         .about__img {
@@ -262,6 +265,15 @@ footer {
 
 
 @media screen and (min-width: 470px) {
+
+    @keyframes arrowmove {
+        from {
+            left: -100px;
+        }
+        to {
+            left: 100px;
+        }
+    }
 
     .header__menu--phone,
     footer {
@@ -411,17 +423,14 @@ footer {
     main {
         margin-left: 5vw;
 
-        hr {
+        .skills__desktop--hr {
+            display: block;
             background-color: colors.$yellow;
             height: 0.2vh;
             border: none;
         }
 
-        #main__h2--portfolio {
-            display: none;
-        }
-
-        .section__skills--mobile {
+        #main__h2--portfolio, .section__skills--mobile{
             display: none;
         }
 
@@ -456,9 +465,11 @@ footer {
                     align-items: center;
                     justify-content: center;
                     height: 90vh;
+                    
 
                     img {
                         width: 30vw;
+                        animation: arrowmove 10s normal;
                     }
                 }
 
@@ -471,30 +482,40 @@ footer {
                 width: 50vw;
                 justify-content: center;
 
-                hr {
+                .skills__desktop--hr {
                     color: colors.$yellow;
+                    display: block;
+                    width: 80vw;
                 }
 
                 .skills__frontend,
                 .skills__backend {
-                    margin-top: 6vh;
-                    text-align: center;
 
-                    p {
-                        font-family: fonts.$fahkwang;
-                    }
+                    margin: 6vh auto 0 auto;
+                    width: 11vw;
 
                     h3 {
                         padding-bottom: 1.5vh;
-                        font-size: 1em;
+                        font-size: 1.2em;
                         font-weight: 600;
+                        padding-left: 0;
+                    }
+                    p {
+                        font-family: fonts.$roboto;
+                        font-size: 1.1em;
+                        font-weight: 100;
+                        padding-top: 0.3vh;
+
+                    }
+                    p:last-of-type {
+                        padding-bottom: 2vh;
                     }
                 }
             }
         }
 
         .section__projects {
-            height: 100vh;
+            height: 90vh;
             width: 100%;
 
 
@@ -548,45 +569,42 @@ footer {
         }
         .section__about {
             height: 100vh;
-            overflow: hidden;
     
             hr {
                 width: 80vw;
                 border: none;
                 height: 0.1vh;
             }
-    
-            .about__img {
-                width: 20vw;
-                border-radius: 50%;
+            .about__flexcontainer {
                 display: flex;
-                margin-top: 5vh;
-            }
+                flex-direction: row;
+                align-items: center;
+                width: 70vw;
+                height: 70vh;
+                margin: 0 auto;
+
+                .about__img {
+                    width: 20vw;
     
-            .about__infotext {
-                margin: 4vh auto 0 auto;
-                width: 57vw;
-    
-    
-    
-                p {
-                    font-size: 0.85em;
-                    font-weight: 100;
-                    padding-bottom: 1em;
-                    line-height: 140%;
+                }
+        
+                .about__infotext {
+                    width: 28vw;
+        
+                    p {
+                        font-size: 1em;
+                    }
                 }
             }
     
             .about__imgcontainer {
     
-                position: relative;
-    
                 img {
-                    width: 400px;
-                    transform: rotate(215deg);
+                    width: 50vw;
+                    transform: rotate(225deg);
                     position: absolute;
-                    left: 35vw;
-                    top: -17vh;
+                    left: 55vw;
+                    top: -40vh;
                     z-index: -1;
                 }
             }
