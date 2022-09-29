@@ -1,10 +1,7 @@
 @use './colors';
 @use './fonts';
+@use './base/reset';
 
-* {
-    margin: 0;
-    padding: 0;
-}
 
 body {
     background-color: colors.$background;
@@ -89,7 +86,7 @@ main {
 
     .section__skills--mobile {
         background-color: colors.$yellow;
-        height: 70vh;
+        height: 75vh;
         display: flex;
         flex-direction: column;
 
@@ -168,7 +165,7 @@ main {
     }
 
     .section__about {
-        height: 100vh;
+        height: 95vh;
         overflow: hidden;
 
         hr {
@@ -363,6 +360,7 @@ footer {
 
         .header__flexcontainer {
             position: relative;
+            display: flex;
             flex-direction: column;
             width: 80vw;
             height: 72vh;
@@ -505,6 +503,7 @@ footer {
             height: 90vh;
             width: 100%;
 
+            
 
             .project__cards {
                 width: 100%;
@@ -515,6 +514,7 @@ footer {
                 justify-content: center;
                 align-items: center;
 
+                
                 .project__cards--card {
                     display: flex;
                     flex-direction: column;
@@ -523,11 +523,18 @@ footer {
                     min-width: 15vw;
                     margin-bottom: 2vh;
                     margin: 1vh 1vw;
+                    border-radius: 10px;
+
+                    &:nth-child(even){
+                        margin-bottom: 10vh;
+                    }
+
 
                     .cards__img {
                         height: 25vh;
                         width: 100%;
                         background-color: colors.$yellow;
+                        border-radius: 10px 10px 0 0;
 
                     }
 

@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   background-color: #F1F0EB;
   color: #524640;
@@ -72,7 +76,7 @@ main #main__h2--portfolio {
 }
 main .section__skills--mobile {
   background-color: #FAC984;
-  height: 70vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
 }
@@ -139,7 +143,7 @@ main .section__projects .project__cards .project__cards--card p {
   font-size: 0.8em;
 }
 main .section__about {
-  height: 100vh;
+  height: 95vh;
   overflow: hidden;
 }
 main .section__about hr {
@@ -297,6 +301,7 @@ footer .footer__icons .footer__icons--icon:hover {
   }
   header .header__flexcontainer {
     position: relative;
+    display: flex;
     flex-direction: column;
     width: 80vw;
     height: 72vh;
@@ -428,11 +433,16 @@ main .section__skills--desktop .skills__desktop--right .skills__backend p:last-o
     min-width: 15vw;
     margin-bottom: 2vh;
     margin: 1vh 1vw;
+    border-radius: 10px;
+  }
+  main .section__projects .project__cards .project__cards--card:nth-child(even) {
+    margin-bottom: 10vh;
   }
   main .section__projects .project__cards .project__cards--card .cards__img {
     height: 25vh;
     width: 100%;
     background-color: #FAC984;
+    border-radius: 10px 10px 0 0;
   }
   main .section__projects .project__cards .project__cards--card .cards__info {
     display: flex;
