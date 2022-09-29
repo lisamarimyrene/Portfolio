@@ -30,7 +30,7 @@ h3 {
 
 header {
 
-    height: 45vh;
+    height: 50vh;
     overflow: hidden;
 
     .header__imgcontainer {
@@ -49,26 +49,14 @@ header {
     .header__flexcontainer {
         width: 100vw;
         position: relative;
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
 
         .header__h2 {
             display: none;
         }
 
-        .header__menu--phone {
-            width: 15vw;
-            justify-content: end;
-            font-size: 2.5em;
-            margin: 3.5vh 5vw 0 0;
-            cursor: pointer;
-
-        }
-
         .header__introtext {
 
-            margin: 5vh 0 0 8vw;
+            margin: 7vh 0 0 8vw;
 
             h1 {
                 font-size: 1.8em;
@@ -87,17 +75,23 @@ header {
 }
 
 main {
-    .skills__desktop--hr, .section__skills--desktop {
+    .skills__desktop--hr, 
+    .section__skills--desktop {
         display: none;
     }
 
     h2 {
-        margin: 2.5vh 0 0 5vw;
+        margin: 2.5vh 0 0 5vh;
+    }
+    #main__h2--portfolio {
+        margin-bottom: 4vh;
     }
 
     .section__skills--mobile {
         background-color: colors.$yellow;
-        height: 65vh;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
 
         h2 {
             padding-top: 2.5vh;
@@ -269,7 +263,6 @@ footer {
         }
     }
 
-    .header__menu--phone,
     footer {
         display: none;
     }

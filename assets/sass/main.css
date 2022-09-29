@@ -26,7 +26,7 @@ h3 {
 }
 
 header {
-  height: 45vh;
+  height: 50vh;
   overflow: hidden;
 }
 header .header__imgcontainer {
@@ -42,22 +42,12 @@ header .header__imgcontainer img {
 header .header__flexcontainer {
   width: 100vw;
   position: relative;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
 }
 header .header__flexcontainer .header__h2 {
   display: none;
 }
-header .header__flexcontainer .header__menu--phone {
-  width: 15vw;
-  justify-content: end;
-  font-size: 2.5em;
-  margin: 3.5vh 5vw 0 0;
-  cursor: pointer;
-}
 header .header__flexcontainer .header__introtext {
-  margin: 5vh 0 0 8vw;
+  margin: 7vh 0 0 8vw;
 }
 header .header__flexcontainer .header__introtext h1 {
   font-size: 1.8em;
@@ -70,15 +60,21 @@ header .header__flexcontainer .header__introtext p {
   font-weight: 100;
 }
 
-main .skills__desktop--hr, main .section__skills--desktop {
+main .skills__desktop--hr,
+main .section__skills--desktop {
   display: none;
 }
 main h2 {
-  margin: 2.5vh 0 0 5vw;
+  margin: 2.5vh 0 0 5vh;
+}
+main #main__h2--portfolio {
+  margin-bottom: 4vh;
 }
 main .section__skills--mobile {
   background-color: #FAC984;
-  height: 65vh;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
 }
 main .section__skills--mobile h2 {
   padding-top: 2.5vh;
@@ -222,8 +218,7 @@ footer .footer__icons .footer__icons--icon:hover {
       left: 100px;
     }
   }
-  .header__menu--phone,
-footer {
+  footer {
     display: none;
   }
   .sidebar {
