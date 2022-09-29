@@ -111,19 +111,21 @@ main .section__projects .project__cards {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 7vh;
+  width: 90vw;
 }
 main .section__projects .project__cards .project__cards--card {
   display: flex;
   flex-direction: column;
   background-color: white;
-  min-height: 30vh;
-  max-width: 65vw;
+  height: auto;
   margin: 2.5vh 1vw;
+  border-radius: 10px;
 }
 main .section__projects .project__cards .project__cards--card .cards__img {
   height: 20vh;
   width: 100%;
   background-color: #FAC984;
+  border-radius: 10px 10px 0 0;
 }
 main .section__projects .project__cards .project__cards--card .cards__info {
   display: flex;
