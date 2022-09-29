@@ -139,7 +139,7 @@ main .section__projects .project__cards .project__cards--card p {
   font-size: 0.8em;
 }
 main .section__about {
-  height: 80vh;
+  height: 100vh;
   overflow: hidden;
 }
 main .section__about hr {
