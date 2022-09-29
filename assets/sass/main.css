@@ -117,7 +117,7 @@ main .section__projects .project__cards .project__cards--card {
   flex-direction: column;
   background-color: white;
   min-height: 30vh;
-  max-width: 50vw;
+  max-width: 65vw;
   margin: 2.5vh 1vw;
 }
 main .section__projects .project__cards .project__cards--card .cards__img {
