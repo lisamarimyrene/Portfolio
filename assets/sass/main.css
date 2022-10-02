@@ -9,6 +9,10 @@ a {
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #F1F0EB;
   color: #524640;
@@ -65,7 +69,7 @@ header .header__flexcontainer .header__introtext p {
 }
 
 main .skills__desktop--hr,
-main .section__skills--desktop {
+main #section__skills--desktop {
   display: none;
 }
 main h2 {
@@ -101,11 +105,11 @@ main .section__skills--mobile .skills__backend h3 {
   font-size: 1em;
   font-weight: 600;
 }
-main .section__projects {
+main #section__projects {
   height: auto;
   padding-bottom: 10vh;
 }
-main .section__projects .project__cards {
+main #section__projects .project__cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -113,7 +117,7 @@ main .section__projects .project__cards {
   margin-top: 7vh;
   width: 100%;
 }
-main .section__projects .project__cards .project__cards--card {
+main #section__projects .project__cards .project__cards--card {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -121,61 +125,61 @@ main .section__projects .project__cards .project__cards--card {
   margin: 2.5vh 1vw;
   border-radius: 10px;
   padding-bottom: 2vh;
-  min-width: 50vw;
+  width: 50vw;
 }
-main .section__projects .project__cards .project__cards--card .cards__img {
+main #section__projects .project__cards .project__cards--card .cards__img {
   height: 20vh;
   width: 100%;
   background-color: #FAC984;
   border-radius: 10px 10px 0 0;
 }
-main .section__projects .project__cards .project__cards--card .cards__info {
+main #section__projects .project__cards .project__cards--card .cards__info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 1em;
 }
-main .section__projects .project__cards .project__cards--card .cards__info h4 {
+main #section__projects .project__cards .project__cards--card .cards__info h4 {
   font-family: "Fahkwang", sans-serif;
 }
-main .section__projects .project__cards .project__cards--card .cards__info .cards__arrowBtn {
+main #section__projects .project__cards .project__cards--card .cards__info .cards__arrowBtn {
   width: 6vw;
   cursor: pointer;
 }
-main .section__projects .project__cards .project__cards--card p {
+main #section__projects .project__cards .project__cards--card p {
   padding-left: 1.3em;
   font-size: 0.8em;
 }
-main .section__about {
+main #section__about {
   height: 95vh;
   overflow: hidden;
 }
-main .section__about hr {
+main #section__about hr {
   width: 85vw;
   margin: 0 auto;
   background-color: #524640;
 }
-main .section__about .about__img {
+main #section__about .about__img {
   margin: 0 auto;
   width: 50vw;
   border-radius: 50%;
   display: flex;
   margin-top: 5vh;
 }
-main .section__about .about__infotext {
+main #section__about .about__infotext {
   margin: 4vh auto 0 auto;
   width: 57vw;
 }
-main .section__about .about__infotext p {
+main #section__about .about__infotext p {
   font-size: 0.85em;
   font-weight: 100;
   padding-bottom: 1em;
   line-height: 140%;
 }
-main .section__about .about__imgcontainer {
+main #section__about .about__imgcontainer {
   position: relative;
 }
-main .section__about .about__imgcontainer img {
+main #section__about .about__imgcontainer img {
   width: 400px;
   transform: rotate(215deg);
   position: absolute;
@@ -282,6 +286,9 @@ footer .footer__icons .footer__icons--icon:hover {
     margin: 4vh auto 0;
     padding-left: 5vw;
   }
+  header .header__navbar a {
+    color: inherit;
+  }
   header .header__navbar ul {
     display: flex;
     flex-direction: row;
@@ -351,76 +358,76 @@ footer .footer__icons .footer__icons--icon:hover {
   main #main__h2--portfolio, main .section__skills--mobile {
     display: none;
   }
-  main .section__projects h2,
-main .section__about h2 {
+  main #section__projects h2,
+main #section__about h2 {
     padding-top: 4vh;
     padding-left: 2.5vw;
   }
-  main .section__skills--desktop {
+  main #section__skills--desktop {
     display: flex;
     flex-direction: row;
     height: 100vh;
   }
-  main .section__skills--desktop .skills__desktop--left {
+  main #section__skills--desktop .skills__desktop--left {
     background-color: #FAC984;
     width: 50vw;
     height: 100vh;
   }
-  main .section__skills--desktop .skills__desktop--left h2 {
+  main #section__skills--desktop .skills__desktop--left h2 {
     padding-top: 4vh;
     padding-left: 2.5vw;
   }
-  main .section__skills--desktop .skills__desktop--left .desktop__left--arrow {
+  main #section__skills--desktop .skills__desktop--left .desktop__left--arrow {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 90vh;
   }
-  main .section__skills--desktop .skills__desktop--left .desktop__left--arrow img {
+  main #section__skills--desktop .skills__desktop--left .desktop__left--arrow img {
     width: 30vw;
     -webkit-animation: arrowmove 10s normal;
             animation: arrowmove 10s normal;
   }
-  main .section__skills--desktop .skills__desktop--right {
+  main #section__skills--desktop .skills__desktop--right {
     display: flex;
     flex-direction: column;
     background-color: #F1F0EB;
     width: 50vw;
     justify-content: center;
   }
-  main .section__skills--desktop .skills__desktop--right .skills__desktop--hr {
+  main #section__skills--desktop .skills__desktop--right .skills__desktop--hr {
     color: #FAC984;
     display: block;
     width: 80vw;
   }
-  main .section__skills--desktop .skills__desktop--right .skills__frontend,
-main .section__skills--desktop .skills__desktop--right .skills__backend {
+  main #section__skills--desktop .skills__desktop--right .skills__frontend,
+main #section__skills--desktop .skills__desktop--right .skills__backend {
     margin: 6vh auto 0 auto;
     width: 11vw;
   }
-  main .section__skills--desktop .skills__desktop--right .skills__frontend h3,
-main .section__skills--desktop .skills__desktop--right .skills__backend h3 {
+  main #section__skills--desktop .skills__desktop--right .skills__frontend h3,
+main #section__skills--desktop .skills__desktop--right .skills__backend h3 {
     padding-bottom: 1.5vh;
     font-size: 1.2em;
     font-weight: 600;
     padding-left: 0;
   }
-  main .section__skills--desktop .skills__desktop--right .skills__frontend p,
-main .section__skills--desktop .skills__desktop--right .skills__backend p {
+  main #section__skills--desktop .skills__desktop--right .skills__frontend p,
+main #section__skills--desktop .skills__desktop--right .skills__backend p {
     font-family: "Roboto", sans-serif;
     font-size: 1.1em;
     font-weight: 100;
     padding-top: 0.3vh;
   }
-  main .section__skills--desktop .skills__desktop--right .skills__frontend p:last-of-type,
-main .section__skills--desktop .skills__desktop--right .skills__backend p:last-of-type {
+  main #section__skills--desktop .skills__desktop--right .skills__frontend p:last-of-type,
+main #section__skills--desktop .skills__desktop--right .skills__backend p:last-of-type {
     padding-bottom: 2vh;
   }
-  main .section__projects {
+  main #section__projects {
     height: 90vh;
     width: 100%;
   }
-  main .section__projects .project__cards {
+  main #section__projects .project__cards {
     width: 100%;
     height: 70vh;
     display: flex;
@@ -429,7 +436,7 @@ main .section__skills--desktop .skills__desktop--right .skills__backend p:last-o
     justify-content: center;
     align-items: center;
   }
-  main .section__projects .project__cards .project__cards--card {
+  main #section__projects .project__cards .project__cards--card {
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -439,41 +446,41 @@ main .section__skills--desktop .skills__desktop--right .skills__backend p:last-o
     margin: 1vh 1vw;
     border-radius: 10px;
   }
-  main .section__projects .project__cards .project__cards--card:nth-child(even) {
+  main #section__projects .project__cards .project__cards--card:nth-child(even) {
     margin-bottom: 10vh;
   }
-  main .section__projects .project__cards .project__cards--card .cards__img {
+  main #section__projects .project__cards .project__cards--card .cards__img {
     height: 25vh;
     width: 100%;
     background-color: #FAC984;
     border-radius: 10px 10px 0 0;
   }
-  main .section__projects .project__cards .project__cards--card .cards__info {
+  main #section__projects .project__cards .project__cards--card .cards__info {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 1em;
   }
-  main .section__projects .project__cards .project__cards--card .cards__info h4 {
+  main #section__projects .project__cards .project__cards--card .cards__info h4 {
     font-family: "Fahkwang", sans-serif;
   }
-  main .section__projects .project__cards .project__cards--card .cards__info .cards__arrowBtn {
+  main #section__projects .project__cards .project__cards--card .cards__info .cards__arrowBtn {
     width: 2vw;
     cursor: pointer;
   }
-  main .section__projects .project__cards .project__cards--card p {
+  main #section__projects .project__cards .project__cards--card p {
     padding-left: 1.3em;
     font-size: 0.8em;
   }
-  main .section__about {
+  main #section__about {
     height: 100vh;
   }
-  main .section__about hr {
+  main #section__about hr {
     width: 84vw;
     border: none;
     height: 0.1vh;
   }
-  main .section__about .about__flexcontainer {
+  main #section__about .about__flexcontainer {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -481,16 +488,16 @@ main .section__skills--desktop .skills__desktop--right .skills__backend p:last-o
     height: 70vh;
     margin: 0 auto;
   }
-  main .section__about .about__flexcontainer .about__img {
+  main #section__about .about__flexcontainer .about__img {
     width: 20vw;
   }
-  main .section__about .about__flexcontainer .about__infotext {
+  main #section__about .about__flexcontainer .about__infotext {
     width: 28vw;
   }
-  main .section__about .about__flexcontainer .about__infotext p {
+  main #section__about .about__flexcontainer .about__infotext p {
     font-size: 1em;
   }
-  main .section__about .about__imgcontainer img {
+  main #section__about .about__imgcontainer img {
     width: 50vw;
     transform: rotate(225deg);
     position: absolute;
