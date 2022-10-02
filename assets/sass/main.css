@@ -441,7 +441,7 @@ main #section__skills--desktop .skills__desktop--right .skills__backend p:last-o
     flex-direction: column;
     background-color: white;
     height: auto;
-    min-width: 10vw;
+    width: 13vw;
     padding-bottom: 2vh;
     margin: 1vh 1vw;
     border-radius: 10px;
