@@ -89,7 +89,7 @@ main {
 
     .section__skills--mobile {
         background-color: colors.$yellow;
-        height: 75vh;
+        height: 80vh;
         display: flex;
         flex-direction: column;
 
@@ -98,15 +98,18 @@ main {
         }
 
         .skills__frontend,
-        .skills__backend {
-            margin: 6vh auto 0 auto;
+        .skills__backend,
+        .skills__programs {
+            margin: 5vh auto 0 auto;
             display: flex;
             justify-content: center;
             flex-direction: column;
             min-width: 41vw;
             
             p {
-                font-family: fonts.$fahkwang;
+                font-family: fonts.$roboto;
+                font-weight: 100;
+                line-height: 120%;
             }
 
             h3 {
@@ -162,8 +165,10 @@ main {
                 }
 
                 p {
-                    padding-left: 1.3em;
+                    padding: 0 1.3em;
                     font-size: 0.8em;
+                    line-height: 120%;
+                    font-weight: 100;
                 }
             }
         }
@@ -481,7 +486,8 @@ footer {
                 }
 
                 .skills__frontend,
-                .skills__backend {
+                .skills__backend,
+                .skills__programs {
 
                     margin: 6vh auto 0 auto;
                     width: 11vw;
@@ -555,13 +561,14 @@ footer {
                         }
 
                         .cards__arrowBtn {
-                            width: 2vw;
+                            width: 1.5vw;
                             cursor: pointer;
                         }
                     }
 
                     p {
                         padding-left: 1.3em;
+                        line-height: 130%;
                         font-size: 0.8em;
                     }
                 }

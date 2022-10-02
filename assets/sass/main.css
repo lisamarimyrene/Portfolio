@@ -80,7 +80,7 @@ main #main__h2--portfolio {
 }
 main .section__skills--mobile {
   background-color: #FAC984;
-  height: 75vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
 }
@@ -88,19 +88,24 @@ main .section__skills--mobile h2 {
   padding-top: 2.5vh;
 }
 main .section__skills--mobile .skills__frontend,
-main .section__skills--mobile .skills__backend {
-  margin: 6vh auto 0 auto;
+main .section__skills--mobile .skills__backend,
+main .section__skills--mobile .skills__programs {
+  margin: 5vh auto 0 auto;
   display: flex;
   justify-content: center;
   flex-direction: column;
   min-width: 41vw;
 }
 main .section__skills--mobile .skills__frontend p,
-main .section__skills--mobile .skills__backend p {
-  font-family: "Fahkwang", sans-serif;
+main .section__skills--mobile .skills__backend p,
+main .section__skills--mobile .skills__programs p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  line-height: 120%;
 }
 main .section__skills--mobile .skills__frontend h3,
-main .section__skills--mobile .skills__backend h3 {
+main .section__skills--mobile .skills__backend h3,
+main .section__skills--mobile .skills__programs h3 {
   padding-bottom: 1.5vh;
   font-size: 1em;
   font-weight: 600;
@@ -147,8 +152,10 @@ main #section__projects .project__cards .project__cards--card .cards__info .card
   cursor: pointer;
 }
 main #section__projects .project__cards .project__cards--card p {
-  padding-left: 1.3em;
+  padding: 0 1.3em;
   font-size: 0.8em;
+  line-height: 120%;
+  font-weight: 100;
 }
 main #section__about {
   height: 95vh;
@@ -401,26 +408,30 @@ main #section__about h2 {
     width: 80vw;
   }
   main #section__skills--desktop .skills__desktop--right .skills__frontend,
-main #section__skills--desktop .skills__desktop--right .skills__backend {
+main #section__skills--desktop .skills__desktop--right .skills__backend,
+main #section__skills--desktop .skills__desktop--right .skills__programs {
     margin: 6vh auto 0 auto;
     width: 11vw;
   }
   main #section__skills--desktop .skills__desktop--right .skills__frontend h3,
-main #section__skills--desktop .skills__desktop--right .skills__backend h3 {
+main #section__skills--desktop .skills__desktop--right .skills__backend h3,
+main #section__skills--desktop .skills__desktop--right .skills__programs h3 {
     padding-bottom: 1.5vh;
     font-size: 1.2em;
     font-weight: 600;
     padding-left: 0;
   }
   main #section__skills--desktop .skills__desktop--right .skills__frontend p,
-main #section__skills--desktop .skills__desktop--right .skills__backend p {
+main #section__skills--desktop .skills__desktop--right .skills__backend p,
+main #section__skills--desktop .skills__desktop--right .skills__programs p {
     font-family: "Roboto", sans-serif;
     font-size: 1.1em;
     font-weight: 100;
     padding-top: 0.3vh;
   }
   main #section__skills--desktop .skills__desktop--right .skills__frontend p:last-of-type,
-main #section__skills--desktop .skills__desktop--right .skills__backend p:last-of-type {
+main #section__skills--desktop .skills__desktop--right .skills__backend p:last-of-type,
+main #section__skills--desktop .skills__desktop--right .skills__programs p:last-of-type {
     padding-bottom: 2vh;
   }
   main #section__projects {
@@ -465,11 +476,12 @@ main #section__skills--desktop .skills__desktop--right .skills__backend p:last-o
     font-family: "Fahkwang", sans-serif;
   }
   main #section__projects .project__cards .project__cards--card .cards__info .cards__arrowBtn {
-    width: 2vw;
+    width: 1.5vw;
     cursor: pointer;
   }
   main #section__projects .project__cards .project__cards--card p {
     padding-left: 1.3em;
+    line-height: 130%;
     font-size: 0.8em;
   }
   main #section__about {
