@@ -261,10 +261,10 @@ footer .footer__icons .footer__icons--icon:hover {
     fill: #F1F0EB;
     fill-rule: evenodd;
     clip-rule: evenodd;
-    width: 2.5vw;
+    width: 2vw;
     padding-right: 0.5em;
     font-weight: 100;
-    padding-bottom: 2.5vh;
+    padding-bottom: 2vh;
   }
   .sidebar .sidebar__flexcontainer--desktop .sidebar__icons .sidebar__icons--icon:hover {
     fill: #FAC984;
