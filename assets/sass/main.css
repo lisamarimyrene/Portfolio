@@ -111,7 +111,7 @@ main .section__projects .project__cards {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 7vh;
-  width: 90vw;
+  width: 100%;
 }
 main .section__projects .project__cards .project__cards--card {
   display: flex;
@@ -120,6 +120,8 @@ main .section__projects .project__cards .project__cards--card {
   height: auto;
   margin: 2.5vh 1vw;
   border-radius: 10px;
+  padding-bottom: 2vh;
+  min-width: 50vw;
 }
 main .section__projects .project__cards .project__cards--card .cards__img {
   height: 20vh;
@@ -431,9 +433,9 @@ main .section__skills--desktop .skills__desktop--right .skills__backend p:last-o
     display: flex;
     flex-direction: column;
     background-color: white;
-    min-height: 40vh;
+    height: auto;
     min-width: 15vw;
-    margin-bottom: 2vh;
+    padding-bottom: 2vh;
     margin: 1vh 1vw;
     border-radius: 10px;
   }
@@ -467,7 +469,7 @@ main .section__skills--desktop .skills__desktop--right .skills__backend p:last-o
     height: 100vh;
   }
   main .section__about hr {
-    width: 80vw;
+    width: 84vw;
     border: none;
     height: 0.1vh;
   }

@@ -124,7 +124,7 @@ main {
             flex-wrap: wrap;
             justify-content: center;
             margin-top: 7vh;
-            width: 90vw;
+            width: 100%;
 
             .project__cards--card {
                 display: flex;
@@ -133,6 +133,8 @@ main {
                 height: auto;
                 margin: 2.5vh 1vw;
                 border-radius: 10px;
+                padding-bottom: 2vh;
+                min-width: 50vw;
 
                 .cards__img {
                     height: 20vh;
@@ -516,9 +518,9 @@ footer {
                     display: flex;
                     flex-direction: column;
                     background-color: white;
-                    min-height: 40vh;
+                    height: auto;
                     min-width: 15vw;
-                    margin-bottom: 2vh;
+                    padding-bottom: 2vh;
                     margin: 1vh 1vw;
                     border-radius: 10px;
 
@@ -562,7 +564,7 @@ footer {
             height: 100vh;
     
             hr {
-                width: 80vw;
+                width: 84vw;
                 border: none;
                 height: 0.1vh;
             }
